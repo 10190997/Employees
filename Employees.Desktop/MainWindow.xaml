@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:Employees.Desktop"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Сотрудники"
-    Width="850"
+    Width="900"
     Height="450"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
@@ -30,45 +30,24 @@
             x:Name="employeesGrid"
             Grid.Row="0"
             Grid.Column="0"
-            Grid.ColumnSpan="6" />
-        <Label
-            Grid.Row="1"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Фамилия" />
-        <Label
-            Grid.Row="2"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Имя" />
-        <Label
-            Grid.Row="3"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Отчество" />
-        <Label
-            Grid.Row="4"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Зарплата" />
-        <Label
+            Grid.ColumnSpan="6"
+            IsReadOnly="True" />
+        <TextBlock Grid.Row="1" Text="Фамилия" />
+        <TextBlock Grid.Row="2" Text="Имя" />
+        <TextBlock Grid.Row="3" Text="Отчество" />
+        <TextBlock Grid.Row="4" Text="Зарплата" />
+        <TextBlock
             Grid.Row="1"
             Grid.Column="2"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Телефон" />
-        <Label
+            Text="Телефон" />
+        <TextBlock
             Grid.Row="2"
             Grid.Column="2"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Отдел" />
-        <Label
+            Text="Отдел" />
+        <TextBlock
             Grid.Row="3"
             Grid.Column="2"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Content="Должность" />
+            Text="Должность" />
         <Button
             x:Name="btnAddEmployee"
             Grid.Row="4"
@@ -82,74 +61,42 @@
             x:Name="cbDepartment"
             Grid.Row="2"
             Grid.Column="3"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            DisplayMemberPath="DepartmentTitle"
-            SelectedIndex="0" />
+            DisplayMemberPath="DepartmentTitle" />
         <ComboBox
             x:Name="cbPosition"
             Grid.Row="3"
             Grid.Column="3"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            DisplayMemberPath="PositionTitle"
-            SelectedIndex="0" />
+            DisplayMemberPath="PositionTitle" />
         <TextBox
             x:Name="tbLastName"
             Grid.Row="1"
-            Grid.Column="1"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
+            Grid.Column="1" />
         <TextBox
             x:Name="tbName"
             Grid.Row="2"
-            Grid.Column="1"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
+            Grid.Column="1" />
         <TextBox
             x:Name="tbPatronymic"
             Grid.Row="3"
-            Grid.Column="1"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
+            Grid.Column="1" />
         <TextBox
             x:Name="tbSalary"
             Grid.Row="4"
-            Grid.Column="1"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
+            Grid.Column="1" />
         <TextBox
             x:Name="tbPhone"
             Grid.Row="1"
-            Grid.Column="3"
-            Width="120"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            TextWrapping="Wrap" />
+            Grid.Column="3" />
         <Button
             x:Name="btnEdit"
             Grid.Row="1"
             Grid.Column="4"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
             Click="btnEdit_Click"
             Content="Изменить" />
         <Button
             x:Name="btnDelete"
             Grid.Row="1"
             Grid.Column="5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
             Click="btnDelete_Click"
             Content="Удалить" />
         <StackPanel
@@ -159,13 +106,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Orientation="Horizontal">
-            <TextBox
-                x:Name="tbSearch"
-                Width="120"
-                TextWrapping="Wrap" />
+            <TextBox x:Name="tbSearch" />
             <Button
                 x:Name="btnSearch"
-                Margin="5,0,0,0"
                 Click="btnSearch_Click"
                 Content="Найти" />
         </StackPanel>
@@ -174,8 +117,7 @@
             Grid.Row="2"
             Grid.Column="4"
             Grid.ColumnSpan="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
+            Width="150"
             Click="btnAll_Click"
             Content="Показать все" />
     </Grid>
